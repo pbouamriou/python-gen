@@ -1,4 +1,4 @@
-.PHONY: help install install-dev clean build wheel test lint type-check format check-all run
+.PHONY: help install install-dev clean build wheel test lint type-check format check-all 
 
 # Variables
 PYTHON := python3
@@ -34,18 +34,15 @@ test: ## Lance les tests avec pytest
 	$(PYTHON) -m pytest tests/ -v --cov=src/python_gen --cov-report=term-missing
 
 lint: ## Lance ruff pour vérifier le style de code
-	$(PYTHON) -m ruff check src/ main.py
+	$(PYTHON) -m ruff check src/
 
 type-check: ## Lance mypy pour vérifier les types
-	PYTHONPATH=src $(PYTHON) -m mypy main.py
+	$(PYTHON) -m mypy src/
 
 format: ## Formate le code avec ruff
-	$(PYTHON) -m ruff format src/ main.py
+	$(PYTHON) -m ruff format src/ 
 
 check-all: lint type-check ## Lance toutes les vérifications (lint + type-check)
-
-run: ## Lance le programme principal
-	PYTHONPATH=src $(PYTHON) main.py
 
 dev-setup: install-dev ## Configure l'environnement de développement complet
 	@echo "✅ Environnement de développement configuré!"
