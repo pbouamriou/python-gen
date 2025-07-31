@@ -36,18 +36,6 @@ pip install -e ".[dev]"
 
 ## 🎯 Usage
 
-### Run the main program
-
-```bash
-make run
-```
-
-or
-
-```bash
-python main.py
-```
-
 ### Build the wheel
 
 ```bash
