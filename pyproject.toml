@@ -29,7 +29,9 @@ where = ["src"]
 
 [tool.ruff]
 target-version = "py39"
-line-length = 88
+line-length = 79
+
+[tool.ruff.lint]
 select = [
     "E",  # pycodestyle errors
     "W",  # pycodestyle warnings
@@ -40,11 +42,10 @@ select = [
     "UP", # pyupgrade
 ]
 ignore = [
-    "E501", # line too long, handled by black
     "B008", # do not perform function calls in argument defaults
 ]
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 known-first-party = ["python_gen"]
 
 [tool.mypy]

@@ -87,11 +87,9 @@ class ComparableProtocol(Protocol):
 
     def __lt__(self, other: Any) -> bool:
         """Compare if self is less than other."""
-        ...
 
     def __le__(self, other: Any) -> bool:
         """Compare if self is less than or equal to other."""
-        ...
 
 
 class SortedList(Generic[Comparable]):
@@ -134,7 +132,9 @@ def swap_pair(pair: Pair[T, U]) -> Pair[U, T]:
     return Pair(pair.get_second(), pair.get_first())
 
 
-def merge_containers(container1: Container[T], container2: Container[U]) -> Pair[T, U]:
+def merge_containers(
+    container1: Container[T], container2: Container[U]
+) -> Pair[T, U]:
     """Generic function that merges two containers."""
     return Pair(container1.get_value(), container2.get_value())
 
