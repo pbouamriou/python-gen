@@ -87,7 +87,6 @@ python-generique/
 │   └── python_gen/
 │       ├── __init__.py
 │       └── generics.py          # Generic types examples
-├── main.py                      # Main entry point
 ├── pyproject.toml              # Project configuration
 ├── Makefile                    # Automated commands
 └── README.md                   # This file
