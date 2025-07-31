@@ -37,11 +37,11 @@ jobs:
 
     - name: Run linting
       run: |
-        python -m ruff check src/ main.py
+        python -m ruff check src/
 
     - name: Run type checking
       run: |
-        PYTHONPATH=src python -m mypy main.py
+        python -m mypy src/
 
     - name: Run tests
       run: |
