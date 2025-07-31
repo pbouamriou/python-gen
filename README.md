@@ -201,7 +201,8 @@ The project uses GitHub Actions for continuous integration:
 - `dependabot.yml`: Automatic dependency updates
 
 ### Status Badges
-[![CI](https://github.com/pbouamriou/python-generique/actions/workflows/ci.yml/badge.svg)](https://github.com/pbouamriou/python-generique/actions/workflows/ci.yml)
+<!-- CI badge will be added once the repository is pushed to GitHub -->
+<!-- [![CI](https://github.com/username/repository-name/actions/workflows/ci.yml/badge.svg)](https://github.com/username/repository-name/actions/workflows/ci.yml) -->
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
