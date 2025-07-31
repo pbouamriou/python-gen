@@ -28,7 +28,7 @@ jobs:
         python -m pytest tests/ --benchmark-only --benchmark-skip --benchmark-min-rounds=100
 
     - name: Upload benchmark results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: benchmark-results
         path: .benchmarks/ 
