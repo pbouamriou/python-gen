@@ -1,0 +1,50 @@
+{
+    "python.defaultInterpreterPath": "./venv/bin/python",
+    "python.formatting.provider": "none",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": false,
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "./venv/bin/mypy",
+    "python.linting.mypyArgs": [
+        "--config-file=pyproject.toml"
+    ],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit",
+            "source.fixAll": "explicit"
+        }
+    },
+    "ruff.enable": true,
+    "ruff.organizeImports": true,
+    "ruff.fixAll": true,
+    "ruff.lint.enable": true,
+    "ruff.format.enable": true,
+    "ruff.configFile": "pyproject.toml",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.pytest_cache": true,
+        "**/.mypy_cache": true,
+        "**/.ruff_cache": true,
+        "**/build": true,
+        "**/dist": true,
+        "**/*.egg-info": true,
+        "**/venv": false
+    },
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestPath": "./venv/bin/pytest",
+    "python.testing.pytestArgs": [
+        "tests/"
+    ],
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true
+} 

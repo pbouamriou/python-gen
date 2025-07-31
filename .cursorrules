@@ -1,0 +1,68 @@
+# Cursor Rules for python-gen project
+
+## Project Context
+This project is an example of Python generic types with strict type checking configuration.
+
+## Development Rules
+
+### Code Style
+- Use standard Python code style (PEP 8)
+- **ALL variable names, function names, class names, and comments MUST be in English**
+- Follow ruff configuration in pyproject.toml
+- Use strict types with mypy
+
+### Language Constraint
+- **CRITICAL: All code comments, docstrings, and inline comments MUST be written in English**
+- No French comments or documentation in the code
+- Use clear, descriptive English for all documentation
+- Follow standard English technical writing conventions
+
+### Generic Types
+- Use TypeVar for generics
+- Define appropriate constraints with `bound=`
+- Use `Generic[T]` for generic classes
+- Prefer Protocols for behavioral constraints
+
+### Project Structure
+- Source code in `src/python_gen/`
+- Tests in `tests/`
+- Main entry point: `main.py`
+- Configuration in `pyproject.toml`
+
+### Available Commands
+- `make run` : Run the main program
+- `make test` : Run tests
+- `make check-all` : Complete verifications
+- `make format` : Format code
+- `make wheel` : Build wheel
+
+### Environment
+- Use virtual environment `venv/`
+- PYTHONPATH configured to `src/`
+- Ruff for formatting and linting
+- Mypy for strict type checking
+
+## Generic Types Examples
+
+```python
+from typing import Generic, TypeVar, Union
+from typing_extensions import Protocol
+
+T = TypeVar("T")
+U = TypeVar("U")
+Comparable = TypeVar("Comparable", bound=Union[int, float, str])
+
+class Container(Generic[T]):
+    def __init__(self, value: T) -> None:
+        self._value = value
+    
+    def get_value(self) -> T:
+        return self._value
+```
+
+## Best Practices
+- Always add explicit return types
+- Use docstrings to document functions
+- Write tests for all functionality
+- Maintain 100% code coverage
+- **Write all comments and documentation in English** 
